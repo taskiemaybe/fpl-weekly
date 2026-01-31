@@ -64,6 +64,23 @@
     
     .fixtures {
       display: grid;
+      gap: 1rem;
+    }
+    
+    .fixture-day {
+      margin-bottom: 0.5rem;
+    }
+    
+    .fixture-day-header {
+      font-size: 0.85rem;
+      color: #00ff87;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #333;
+    }
+    
+    .fixture-day-games {
+      display: grid;
       gap: 0.5rem;
     }
     
@@ -76,29 +93,24 @@
       font-size: 0.9rem;
     }
     
+    .fixture-time {
+      font-size: 0.8rem;
+      color: #888;
+      min-width: 65px;
+    }
+    
     .fixture-teams {
       flex: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
     }
     
     .team { font-weight: 600; min-width: 40px; }
     .team-home { text-align: right; }
     .team-away { text-align: left; }
-    .vs { color: #666; font-size: 0.8rem; }
-    
-    .fdr {
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.8rem;
-      margin: 0 4px;
-    }
+    .vs { color: #666; font-size: 0.8rem; margin: 0 0.5rem; }
     
     .player-list {
       display: grid;
@@ -195,7 +207,7 @@
   <header>
     <h1>⚽ FPL Weekly</h1>
     <div style="color: #888; font-size: 1.1rem;">Gameweek 24</div>
-    <div class="deadline">⏰ 6h 46m</div>
+    <div class="deadline">⏰ 6h 42m</div>
     <div class="deadline-time">Sat 31 Jan, 13:30 UTC</div>
   </header>
 
@@ -203,109 +215,129 @@
     <h2>📋 Fixtures</h2>
     <div class="fixtures">
       
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">BHA</span>
-            <span class="fdr" style="background: #00ff87; color: #333">2</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">EVE</span>
+        <div class="fixture-day">
+          <div class="fixture-day-header">Saturday 31 Jan</div>
+          <div class="fixture-day-games">
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-01-31T15:00:00Z">15:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">BHA</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">EVE</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-01-31T15:00:00Z">15:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">LEE</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">ARS</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-01-31T15:00:00Z">15:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">WOL</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">BOU</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-01-31T17:30:00Z">17:30 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">CHE</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">WHU</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-01-31T20:00:00Z">20:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">LIV</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">NEW</span>
+                </div>
+              </div>
+            
           </div>
         </div>
       
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">LEE</span>
-            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">ARS</span>
+        <div class="fixture-day">
+          <div class="fixture-day-header">Sunday 1 Feb</div>
+          <div class="fixture-day-games">
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-02-01T14:00:00Z">14:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">AVL</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">BRE</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-02-01T14:00:00Z">14:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">MUN</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">FUL</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-02-01T14:00:00Z">14:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">NFO</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">CRY</span>
+                </div>
+              </div>
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-02-01T16:30:00Z">16:30 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">TOT</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">MCI</span>
+                </div>
+              </div>
+            
           </div>
         </div>
       
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">WOL</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #00ff87; color: #333">2</span>
-            <span class="team team-away">BOU</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">CHE</span>
-            <span class="fdr" style="background: #00ff87; color: #333">2</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">WHU</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">LIV</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
-            <span class="team team-away">NEW</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">AVL</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">BRE</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">MUN</span>
-            <span class="fdr" style="background: #00ff87; color: #333">2</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">FUL</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">NFO</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">CRY</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">TOT</span>
-            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">MCI</span>
-          </div>
-        </div>
-      
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">SUN</span>
-            <span class="fdr" style="background: #00ff87; color: #333">2</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
-            <span class="team team-away">BUR</span>
+        <div class="fixture-day">
+          <div class="fixture-day-header">Monday 2 Feb</div>
+          <div class="fixture-day-games">
+            
+              <div class="fixture">
+                <span class="fixture-time" data-utc="2026-02-02T20:00:00Z">20:00 UTC</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">SUN</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">BUR</span>
+                </div>
+              </div>
+            
           </div>
         </div>
       
     </div>
-    <div class="updated">FDR: 1 = easiest, 5 = hardest</div>
+    <div class="updated">Times shown in your local timezone</div>
   </section>
+  
+  <script>
+    // Convert UTC times to local timezone
+    document.querySelectorAll('.fixture-time[data-utc]').forEach(el => {
+      const utc = el.dataset.utc;
+      const local = new Date(utc).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      el.textContent = local;
+    });
+  </script>
 
   
   <section>
@@ -584,7 +616,7 @@
 
   <footer>
     <p>Built by <a href="https://taskiemaybe.up.railway.app">Taskie</a> 🤖</p>
-    <p style="margin-top: 0.5rem;">Data from FPL API • Updated 2026-01-31T06:43:35.344Z</p>
+    <p style="margin-top: 0.5rem;">Data from FPL API • Updated 2026-01-31T06:47:37.648Z</p>
   </footer>
 </body>
 </html>

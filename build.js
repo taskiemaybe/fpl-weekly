@@ -52,6 +52,24 @@ function formatDeadline(deadline) {
   });
 }
 
+function formatKickoff(kickoff) {
+  const d = new Date(kickoff);
+  return d.toLocaleTimeString('en-GB', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }) + ' UTC';
+}
+
+function formatDateHeading(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-GB', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'short'
+  });
+}
+
 function getTimeUntil(deadline) {
   const now = new Date();
   const dl = new Date(deadline);
@@ -94,6 +112,19 @@ function buildHTML(data) {
   
   const currentGW = getCurrentGameweek(events);
   const gwFixtures = fixtures.filter(f => f.event === currentGW.id);
+  
+  // Group fixtures by date
+  const fixturesByDate = {};
+  gwFixtures.forEach(f => {
+    const date = new Date(f.kickoff_time).toDateString();
+    if (!fixturesByDate[date]) fixturesByDate[date] = [];
+    fixturesByDate[date].push(f);
+  });
+  
+  // Sort fixtures within each day by kickoff time
+  Object.values(fixturesByDate).forEach(dayFixtures => {
+    dayFixtures.sort((a, b) => new Date(a.kickoff_time) - new Date(b.kickoff_time));
+  });
   
   // Top transfers in
   const topTransfersIn = [...players]
@@ -229,6 +260,23 @@ function buildHTML(data) {
     
     .fixtures {
       display: grid;
+      gap: 1rem;
+    }
+    
+    .fixture-day {
+      margin-bottom: 0.5rem;
+    }
+    
+    .fixture-day-header {
+      font-size: 0.85rem;
+      color: #00ff87;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #333;
+    }
+    
+    .fixture-day-games {
+      display: grid;
       gap: 0.5rem;
     }
     
@@ -241,29 +289,24 @@ function buildHTML(data) {
       font-size: 0.9rem;
     }
     
+    .fixture-time {
+      font-size: 0.8rem;
+      color: #888;
+      min-width: 65px;
+    }
+    
     .fixture-teams {
       flex: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
     }
     
     .team { font-weight: 600; min-width: 40px; }
     .team-home { text-align: right; }
     .team-away { text-align: left; }
-    .vs { color: #666; font-size: 0.8rem; }
-    
-    .fdr {
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.8rem;
-      margin: 0 4px;
-    }
+    .vs { color: #666; font-size: 0.8rem; margin: 0 0.5rem; }
     
     .player-list {
       display: grid;
@@ -367,20 +410,35 @@ function buildHTML(data) {
   <section>
     <h2>📋 Fixtures</h2>
     <div class="fixtures">
-      ${gwFixtures.map(f => `
-        <div class="fixture">
-          <div class="fixture-teams">
-            <span class="team team-home">${getTeamName(teams, f.team_h)}</span>
-            <span class="fdr" style="background: ${getDifficultyColor(f.team_h_difficulty)}; color: ${getDifficultyTextColor(f.team_h_difficulty)}">${f.team_h_difficulty}</span>
-            <span class="vs">vs</span>
-            <span class="fdr" style="background: ${getDifficultyColor(f.team_a_difficulty)}; color: ${getDifficultyTextColor(f.team_a_difficulty)}">${f.team_a_difficulty}</span>
-            <span class="team team-away">${getTeamName(teams, f.team_a)}</span>
+      ${Object.entries(fixturesByDate).map(([date, dayFixtures]) => `
+        <div class="fixture-day">
+          <div class="fixture-day-header">${formatDateHeading(date)}</div>
+          <div class="fixture-day-games">
+            ${dayFixtures.map(f => `
+              <div class="fixture">
+                <span class="fixture-time" data-utc="${f.kickoff_time}">${formatKickoff(f.kickoff_time)}</span>
+                <div class="fixture-teams">
+                  <span class="team team-home">${getTeamName(teams, f.team_h)}</span>
+                  <span class="vs">vs</span>
+                  <span class="team team-away">${getTeamName(teams, f.team_a)}</span>
+                </div>
+              </div>
+            `).join('')}
           </div>
         </div>
       `).join('')}
     </div>
-    <div class="updated">FDR: 1 = easiest, 5 = hardest</div>
+    <div class="updated">Times shown in your local timezone</div>
   </section>
+  
+  <script>
+    // Convert UTC times to local timezone
+    document.querySelectorAll('.fixture-time[data-utc]').forEach(el => {
+      const utc = el.dataset.utc;
+      const local = new Date(utc).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      el.textContent = local;
+    });
+  </script>
 
   ${injuries.length > 0 ? `
   <section>
