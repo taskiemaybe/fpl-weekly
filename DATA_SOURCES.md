@@ -48,6 +48,11 @@ No official rate limit documented, but be reasonable. Cache aggressively.
 
 ## External Sources (Need Integration)
 
+### Fantasy Football Scout
+- **URL:** https://www.fantasyfootballscout.co.uk/
+- **What they have:** Member stats, projected points, fixture ticker, set piece takers, underlying stats (xG, xA)
+- **Notes:** Some content paywalled, but free tier still useful
+
 ### Injury News
 - **Premier Injuries** (premierinjuries.com) — Dedicated injury tracker
 - **FPL Twitter** (@OfficialFPL) — Official announcements
