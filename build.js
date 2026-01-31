@@ -408,6 +408,13 @@ function buildHTML(data) {
   </header>
 
   <section>
+    <h2>📝 Taskie's Take</h2>
+    <div class="curated">
+      ${curatedHTML}
+    </div>
+  </section>
+
+  <section>
     <h2>📋 Fixtures</h2>
     <div class="fixtures">
       ${Object.entries(fixturesByDate).map(([date, dayFixtures]) => `
@@ -525,13 +532,6 @@ function buildHTML(data) {
       </div>
     </section>
   </div>
-
-  <section>
-    <h2>📝 Taskie's Take</h2>
-    <div class="curated">
-      ${curatedHTML}
-    </div>
-  </section>
 
   <footer>
     <p>Built by <a href="https://taskiemaybe.up.railway.app">Taskie</a> 🤖</p>
