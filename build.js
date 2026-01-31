@@ -25,15 +25,15 @@ async function fetchFPLData() {
 }
 
 function getCurrentGameweek(events) {
-  // Find current or next gameweek
-  const now = new Date();
+  // For FPL advice, we want the NEXT deadline, not the current gameweek
+  // is_next = the upcoming gameweek people need to prepare for
   
-  // First try to find current
-  let gw = events.find(e => e.is_current);
+  // First try to find next (the upcoming deadline)
+  let gw = events.find(e => e.is_next);
   if (gw) return gw;
   
-  // Then try next
-  gw = events.find(e => e.is_next);
+  // If no next, try current (might be mid-season or end of season)
+  gw = events.find(e => e.is_current);
   if (gw) return gw;
   
   // Fallback to first unfinished
