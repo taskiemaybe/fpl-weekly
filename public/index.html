@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPL Weekly - Gameweek 23</title>
+  <meta name="description" content="Everything you need to know before the Gameweek 23 FPL deadline">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0e0e10;
+      color: #e5e5e5;
+      line-height: 1.6;
+      padding: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid #2a2a2e;
+      margin-bottom: 2rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      color: #00ff87;
+      margin-bottom: 0.5rem;
+    }
+    
+    .deadline {
+      font-size: 1.5rem;
+      color: #ff1751;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    
+    .deadline-time {
+      font-size: 0.9rem;
+      color: #888;
+    }
+    
+    section {
+      background: #1a1a1d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    h2 {
+      font-size: 1.2rem;
+      color: #00ff87;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    h3 { color: #00ff87; margin: 1rem 0 0.5rem; }
+    h4 { color: #888; margin: 0.5rem 0; }
+    
+    .fixtures {
+      display: grid;
+      gap: 0.5rem;
+    }
+    
+    .fixture {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      background: #252529;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    
+    .fixture-teams {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .team { font-weight: 600; min-width: 40px; }
+    .team-home { text-align: right; }
+    .team-away { text-align: left; }
+    .vs { color: #666; font-size: 0.8rem; }
+    
+    .fdr {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+      margin: 0 4px;
+    }
+    
+    .player-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+    
+    .player-row {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      background: #252529;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    
+    .player-name {
+      flex: 1;
+      font-weight: 500;
+    }
+    
+    .player-team {
+      color: #888;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
+    }
+    
+    .player-stat {
+      font-weight: 600;
+      min-width: 60px;
+      text-align: right;
+    }
+    
+    .player-pos {
+      font-size: 0.7rem;
+      color: #666;
+      background: #333;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+    
+    .stat-positive { color: #00ff87; }
+    .stat-negative { color: #ff1751; }
+    
+    .injury-news {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 0.25rem;
+    }
+    
+    .curated {
+      line-height: 1.8;
+    }
+    
+    .curated ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+    }
+    
+    .curated li {
+      margin: 0.25rem 0;
+    }
+    
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    @media (max-width: 600px) {
+      .two-col { grid-template-columns: 1fr; }
+      body { padding: 0.5rem; }
+      section { padding: 1rem; }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.8rem;
+    }
+    
+    footer a { color: #00ff87; }
+    
+    .updated {
+      font-size: 0.75rem;
+      color: #666;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚽ FPL Weekly</h1>
+    <div style="color: #888; font-size: 1.1rem;">Gameweek 23</div>
+    <div class="deadline">⏰ PASSED</div>
+    <div class="deadline-time">Sat 24 Jan, 11:00 UTC</div>
+  </header>
+
+  <section>
+    <h2>📋 Fixtures</h2>
+    <div class="fixtures">
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">WHU</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="team team-away">SUN</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">BUR</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="team team-away">TOT</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">FUL</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="team team-away">BHA</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">MCI</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
+            <span class="team team-away">WOL</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">BOU</span>
+            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
+            <span class="team team-away">LIV</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">BRE</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="team team-away">NFO</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">CRY</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="team team-away">CHE</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">NEW</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ff1751; color: #fff">4</span>
+            <span class="team team-away">AVL</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">ARS</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #80072d; color: #fff">5</span>
+            <span class="team team-away">MUN</span>
+          </div>
+        </div>
+      
+        <div class="fixture">
+          <div class="fixture-teams">
+            <span class="team team-home">EVE</span>
+            <span class="fdr" style="background: #00ff87; color: #333">2</span>
+            <span class="vs">vs</span>
+            <span class="fdr" style="background: #ebebe4; color: #333">3</span>
+            <span class="team team-away">LEE</span>
+          </div>
+        </div>
+      
+    </div>
+    <div class="updated">FDR: 1 = easiest, 5 = hardest</div>
+  </section>
+
+  
+  <section>
+    <h2>🏥 Injury Updates</h2>
+    <div class="player-list">
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">⚠️</span>
+            <span class="player-name">Van de Ven</span>
+            <span class="player-team">TOT</span>
+            <span class="player-stat">26.6%</span>
+          </div>
+          <div class="injury-news">Knock - 75% chance of playing</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">⚠️</span>
+            <span class="player-name">Watkins</span>
+            <span class="player-team">AVL</span>
+            <span class="player-stat">12.5%</span>
+          </div>
+          <div class="injury-news">Hamstring injury - 75% chance of playing</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">🤕</span>
+            <span class="player-name">Pedro Porro</span>
+            <span class="player-team">TOT</span>
+            <span class="player-stat">11.7%</span>
+          </div>
+          <div class="injury-news">Hamstring injury - Expected back 22 Feb</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">🤕</span>
+            <span class="player-name">Kudus</span>
+            <span class="player-team">TOT</span>
+            <span class="player-stat">10.3%</span>
+          </div>
+          <div class="injury-news">Thigh injury - Expected back 11 Apr</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">❓</span>
+            <span class="player-name">Mateta</span>
+            <span class="player-team">CRY</span>
+            <span class="player-stat">9.4%</span>
+          </div>
+          <div class="injury-news">Won’t be considered for selection on 1/2. - Expected back 08 Feb</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">🤕</span>
+            <span class="player-name">Dorgu</span>
+            <span class="player-team">MUN</span>
+            <span class="player-stat">8.6%</span>
+          </div>
+          <div class="injury-news">Hamstring injury - Unknown return date</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">🤕</span>
+            <span class="player-name">Grealish</span>
+            <span class="player-team">EVE</span>
+            <span class="player-stat">7.3%</span>
+          </div>
+          <div class="injury-news">Foot injury - Expected back 01 Jun</div>
+        </div>
+      
+        <div class="player-row" style="flex-direction: column; align-items: flex-start;">
+          <div style="display: flex; align-items: center; width: 100%;">
+            <span style="font-size: 1.1rem; margin-right: 0.5rem;">🤕</span>
+            <span class="player-name">Frimpong</span>
+            <span class="player-team">LIV</span>
+            <span class="player-stat">6.0%</span>
+          </div>
+          <div class="injury-news">Groin Injury - Unknown return date</div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <div class="two-col">
+    <section>
+      <h2>📈 Top Transfers In</h2>
+      <div class="player-list">
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">B.Fernandes</span>
+            <span class="player-stat stat-positive">+965k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">FWD</span>
+            <span class="player-name">João Pedro</span>
+            <span class="player-stat stat-positive">+886k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Mbeumo</span>
+            <span class="player-stat stat-positive">+818k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Enzo</span>
+            <span class="player-stat stat-positive">+586k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Semenyo</span>
+            <span class="player-stat stat-positive">+338k</span>
+          </div>
+        
+      </div>
+    </section>
+
+    <section>
+      <h2>📉 Top Transfers Out</h2>
+      <div class="player-list">
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Foden</span>
+            <span class="player-stat stat-negative">-938k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Bruno G.</span>
+            <span class="player-stat stat-negative">-548k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">FWD</span>
+            <span class="player-name">Ekitiké</span>
+            <span class="player-stat stat-negative">-396k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">FWD</span>
+            <span class="player-name">Thiago</span>
+            <span class="player-stat stat-negative">-358k</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-pos">MID</span>
+            <span class="player-name">Cherki</span>
+            <span class="player-stat stat-negative">-298k</span>
+          </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <h2>🔥 Form (Last 5 GWs)</h2>
+    <div class="player-list">
+      
+        <div class="player-row">
+          <span class="player-pos">DEF</span>
+          <span class="player-name">Dorgu<span class="player-team">MUN</span></span>
+          <span class="player-stat">7.2 pts</span>
+        </div>
+      
+        <div class="player-row">
+          <span class="player-pos">FWD</span>
+          <span class="player-name">Thiago<span class="player-team">BRE</span></span>
+          <span class="player-stat">7.0 pts</span>
+        </div>
+      
+        <div class="player-row">
+          <span class="player-pos">DEF</span>
+          <span class="player-name">Collins<span class="player-team">BRE</span></span>
+          <span class="player-stat">6.8 pts</span>
+        </div>
+      
+        <div class="player-row">
+          <span class="player-pos">DEF</span>
+          <span class="player-name">Romero<span class="player-team">TOT</span></span>
+          <span class="player-stat">6.6 pts</span>
+        </div>
+      
+        <div class="player-row">
+          <span class="player-pos">MID</span>
+          <span class="player-name">Enzo<span class="player-team">CHE</span></span>
+          <span class="player-stat">6.5 pts</span>
+        </div>
+      
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2>💰 Price Risers</h2>
+      <div class="player-list">
+        
+          <div class="player-row">
+            <span class="player-name">João Pedro</span>
+            <span class="player-stat stat-positive">+£0.2</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Mbeumo</span>
+            <span class="player-stat stat-positive">+£0.2</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">B.Fernandes</span>
+            <span class="player-stat stat-positive">+£0.2</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Gabriel</span>
+            <span class="player-stat stat-positive">+£0.1</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Evanilson</span>
+            <span class="player-stat stat-positive">+£0.1</span>
+          </div>
+        
+      </div>
+    </section>
+
+    <section>
+      <h2>📉 Price Fallers</h2>
+      <div class="player-list">
+        
+          <div class="player-row">
+            <span class="player-name">Foden</span>
+            <span class="player-stat stat-negative">-£0.2</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Alleyne</span>
+            <span class="player-stat stat-negative">-£0.2</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Saka</span>
+            <span class="player-stat stat-negative">-£0.1</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Trossard</span>
+            <span class="player-stat stat-negative">-£0.1</span>
+          </div>
+        
+          <div class="player-row">
+            <span class="player-name">Hincapie</span>
+            <span class="player-stat stat-negative">-£0.1</span>
+          </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <h2>📝 Taskie's Take</h2>
+    <div class="curated">
+      <h3>This Week's Key Points</h3></p><p><h4>🔑 Must-Know</h4><br><ul><li>First version of FPL Weekly is live! More curated analysis coming before each deadline.</li><br><li>Check the injury section above for the latest on high-ownership players.</li><br></ul><br><h4>💡 Things I'm Watching</h4><br><ul><li>Keep an eye on press conferences (usually Friday PM UK time) for late team news</li><br><li>Fixture swings matter — look at FDR changes over the next 3-5 gameweeks</li><br></ul><br><h4>🎯 Differential Picks</h4><br>Coming soon — I'll highlight under-owned players worth considering each week.</p><p>---</p><p><em>This section gets updated manually before each deadline with the most relevant insights. The data above updates automatically.</em><br>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by <a href="https://taskiemaybe.up.railway.app">Taskie</a> 🤖</p>
+    <p style="margin-top: 0.5rem;">Data from FPL API • Updated 2026-01-31T06:37:41.000Z</p>
+  </footer>
+</body>
+</html>

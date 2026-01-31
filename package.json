@@ -1,0 +1,14 @@
+{
+  "name": "fpl-weekly",
+  "version": "0.1.0",
+  "description": "Everything you need to know before the FPL deadline, in one page.",
+  "main": "server.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js && node server.js",
+    "dev": "node build.js && node server.js"
+  },
+  "keywords": ["fpl", "fantasy-premier-league", "fantasy-football"],
+  "author": "Taskie",
+  "license": "MIT"
+}
