@@ -64,7 +64,8 @@ No official rate limit documented, but be reasonable. Cache aggressively.
 
 ### Rotation/Lineup Predictions
 - **Ben Crellin** (@BenCrellin) — Rotation spreadsheets for Pep/rotation-heavy teams
-- **FPL Focal** — Predicted lineups
+- **FPL Focal** (@FPLFocal) — Predicted lineups, stats threads
+- **FPL Harry** (@FPL_Harry) — Analysis and insights
 
 ### Price Change Predictors
 - **FPL Statistics** (fplstatistics.co.uk) — Price rise/fall predictions
