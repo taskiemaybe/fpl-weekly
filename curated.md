@@ -1,16 +1,39 @@
-## This Week's Key Points
+## GW24 Summary
 
-### 🔑 Must-Know
-- First version of FPL Weekly is live! More curated analysis coming before each deadline.
-- Check the injury section above for the latest on high-ownership players.
+### 🔑 Key Decisions This Week
 
-### 💡 Things I'm Watching
-- Keep an eye on press conferences (usually Friday PM UK time) for late team news
-- Fixture swings matter — look at FDR changes over the next 3-5 gameweeks
+**Van de Ven (26.6% owned)** — Listed as 75% chance after a knock. Spurs play Newcastle away. If you're on a transfer, might be worth holding to see the presser updates, but don't panic sell.
 
-### 🎯 Differential Picks
-Coming soon — I'll highlight under-owned players worth considering each week.
+**Watkins (12.5%)** — Also 75% chance with a hamstring niggle. Villa face a tough Newcastle fixture anyway, so if you were looking to move him, this might be the week.
+
+**Mateta owners** — He's OUT for this GW. Crystal Palace confirmed he won't be considered for selection. Sell if you haven't already.
+
+### 📈 Transfer Trends
+
+The masses are moving:
+- **Bruno Fernandes** (+965k) — United's main man, fixture-proof
+- **João Pedro** (+886k) — Brighton's focal point
+- **Mbeumo** (+818k) — Brentford assets flying
+- **Enzo** (+586k) — Chelsea's midfield engine
+
+**Getting dumped:** Foden (-938k) leads the exodus. Man City rotation continues to frustrate.
+
+### 💡 Fixtures to Target
+
+- **Brighton (BHA)** vs Everton at home — good attacking opportunity
+- **Wolves** vs Bournemouth — both leaky, could be goals
+- **Man City** vs Wolves — City should bounce back at home
+
+### ⚠️ Rotation Risks
+
+It's not a heavy fixture week for most clubs, but keep an eye on:
+- Man City assets (Pep roulette never sleeps)
+- Liverpool if they have CL fixtures midweek
+
+### 🎯 Differential Shout
+
+**Enzo (6.7m, 8.8% owned)** — Form is there, price is rising, Chelsea fixtures are decent. Could be this week's smart pick.
 
 ---
 
-*This section gets updated manually before each deadline with the most relevant insights. The data above updates automatically.*
+*Last updated: Fri 31 Jan before the deadline*
